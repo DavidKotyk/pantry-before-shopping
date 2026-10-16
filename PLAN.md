@@ -1,6 +1,6 @@
 # Pantry Before Shopping
 
-Status: local deliverables complete; needs human eligibility/feedback and publication/submission approval. Created October 16, 2026.
+Status: submitted and visibly verified October 16, 2026 at 12:25:54 UTC. See docs/submission-receipt.json and review-packet/INDEX.md. Historical implementation notes below are retained.
 
 ## Opportunity and qualification
 

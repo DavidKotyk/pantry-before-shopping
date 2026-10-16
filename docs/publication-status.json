@@ -5,9 +5,9 @@
   "videoUrl": "https://youtu.be/hkjV6B2NHto",
   "videoPublished": true,
   "videoStatus": "YouTube Studio displayed Video published, Oct 16 2026, duration 1:41. Copyright checks were still in progress.",
-  "contestSubmitted": false,
-  "authorization": "User instructed Submit it after reviewing the local packet; source/video publication necessary for that entry is authorized. Personal attestations and final legal acceptance remain pending.",
-  "updatedAt": "2026-10-16T09:16:28.607280+00:00",
+  "contestSubmitted": true,
+  "authorization": "David authorized publication, confirmed eligibility and rules/terms, instructed submission and supplied the three required personal answers.",
+  "updatedAt": "2026-10-16T12:25:54Z",
   "unauthenticatedPlaybackVerified": true,
   "videoVerification": "Incognito displayed Sign in, the correct title and playback at 0:02 of 1:40.",
   "eligibilityConfirmedByUser": true,
@@ -15,10 +15,7 @@
   "registrationStatus": "Registered successfully; Devpost displayed Thanks for registering. User confirmed no Amazon developer account and eligibility/rules/terms.",
   "devpostProjectUrl": "https://devpost.com/software/pantry-before-shopping",
   "devpostSubmissionId": 1240233,
-  "devpostStatus": "Draft 3/5. Overview, story, links and thumbnail saved. Additional information saved with three required personal responses blank; final agreement unchecked. Not submitted.",
-  "pendingPersonalAnswers": [
-    "Learning level: None / Moderate / Significant",
-    "AI career value: Yes / No",
-    "Build with these tools again: Yes/No and reason"
-  ]
+  "devpostStatus": "Submitted. Project submitted! confirmation and SUBMITTED TO contest listing visibly verified.",
+  "pendingPersonalAnswers": [],
+  "submissionReceipt": "docs/submission-receipt.json"
 }
