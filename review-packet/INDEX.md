@@ -40,3 +40,7 @@ Self-hosted MCP server with a guided deterministic UI, four curated recipes, syn
 The optional Open Source mini-challenge has not been claimed. A local MIT repository alone does not establish a qualifying public contribution alongside a primary entry.
 
 Registration gate: Amazon asks prior developer history (no developer account / account but unpublished / one published integration / actively maintaining published apps). That answer and action-time eligibility/terms confirmation were requested in chat. Known fields are filled; agreements remain unchecked.
+
+## Current Devpost checkpoint
+
+User confirmed event eligibility, no Amazon developer account, and authorized rules/terms and submission. Registration succeeded. Draft https://devpost.com/software/pantry-before-shopping (ID 1240233) contains saved name/story/source/video/thumbnail and technical feedback. Three required personal survey answers remain blank: learning level, AI career value, and use-tools-again Yes/No+reason. The combined chat question is pending. Finalization is available, but submission has not occurred. Older pending-registration notes above are superseded by this checkpoint.
