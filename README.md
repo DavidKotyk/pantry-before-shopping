@@ -27,3 +27,7 @@ State is saved in `data/pantry.json` with temporary-file replacement. Back up th
 `npm test` exercises domain behavior and a real official-SDK client over Streamable HTTP, including initialization, schema failures, confirmation, replay and host/origin rejection. `scripts/browser-check.mjs` verifies the guided browser flow in an isolated state file. Install Google Chrome, then run `node scripts/browser-check.mjs`. Playwright is a pinned development dependency; the scripts launch Chrome with `channel: chrome`. Normal app operation does not need Playwright or Chrome specifically. Evidence is in `docs/`.
 
 Implementation and entry materials use disclosed AI assistance. No measured household savings, novel algorithm, user study or likelihood of an award is asserted. Read PLAN.md for the contest gate and remaining work.
+
+## Public demo
+
+Captioned working recording: https://youtu.be/hkjV6B2NHto . Public source: https://github.com/DavidKotyk/pantry-before-shopping . Contest submission is still pending; no acceptance or award is claimed.

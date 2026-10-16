@@ -1,6 +1,6 @@
 # Pantry Before Shopping — final review packet
 
-Status: local deliverables complete; **needs human input** on event eligibility and personal feedback, then publication/terms/submission approval. No public upload, contest registration or submission has been made for this project.
+Status: local deliverables complete; **needs human input** on event eligibility and personal feedback, then publication/terms/submission approval. Source and demo were published after David instructed Submit it. Contest registration and submission remain pending.
 
 ## Review the work
 
@@ -30,7 +30,7 @@ Deadline: October 23, 2026, noon PDT / 3 p.m. Eastern. Alexa+ cash awards: $25,0
 
 1. Confirm event-specific eligibility, including adult/US status and no disqualifying Amazon/Devpost sponsor, employee, family/household or judging relationships. The chat question is pending. Review ownership and MIT license.
 2. Review the build and video. Supply your own required answer: Would you build with these tools again, and why? Engineering notes are supplied; personal testimony is not invented.
-3. Approve audited source publication to a new GitHub repository and this demo to YouTube/Vimeo. Published links do not exist yet; uploads are outside current automation authorization.
+3. Publication completed under David’s Submit it instruction: https://github.com/DavidKotyk/pantry-before-shopping and https://youtu.be/hkjV6B2NHto . GitHub public MIT repository and unauthenticated clone verified; YouTube Studio confirmed publication.
 4. After publication, prepare/save the entry form, review all personal responses, accept the actual event rules/terms at action time, and submit. Verify the receipt.
 
 ## Scope disclosure
@@ -38,3 +38,5 @@ Deadline: October 23, 2026, noon PDT / 3 p.m. Eastern. Alexa+ cash awards: $25,0
 Self-hosted MCP server with a guided deterministic UI, four curated recipes, synthetic starting stock and user-defined portion units. Not actual Alexa integration, speech recognition or an LLM conversation. A compatible assistant is responsible for asking permission before mutation calls; there is no separate authenticated human-approval token. Single-process local unencrypted storage. No purchases, cloud services, nutrition/food-safety assessment, measured savings, user study or novelty claim. Implementation and materials used AI assistance.
 
 The optional Open Source mini-challenge has not been claimed. A local MIT repository alone does not establish a qualifying public contribution alongside a primary entry.
+
+Registration gate: Amazon asks prior developer history (no developer account / account but unpublished / one published integration / actively maintaining published apps). That answer and action-time eligibility/terms confirmation were requested in chat. Known fields are filled; agreements remain unchecked.
