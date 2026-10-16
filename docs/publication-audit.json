@@ -1,0 +1,7 @@
+{
+  "at": "2026-10-16T04:22:27.157713+00:00",
+  "filesReviewed": 25,
+  "credentialPatternHits": [],
+  "scope": "Tracked-candidate source and text artifacts; excluded node_modules, .git, state data and temporary video files. Pattern scan is not a guarantee of absence.",
+  "publication": "No remote created or upload performed."
+}

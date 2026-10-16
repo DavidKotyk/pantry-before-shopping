@@ -1,0 +1,42 @@
+[
+  {
+    "text": "Pantry Before Shopping. Plan dinner from recorded supplies, then keep the final say over what gets used.",
+    "seconds": 9
+  },
+  {
+    "text": "This guided demo calls a real self-hosted MCP server. The starting pantry is synthetic; this is not a live Alexa connection.",
+    "seconds": 9
+  },
+  {
+    "text": "Two dinners share the same pantry. Three tomato portions cover rice and beans, then pasta. Previewing consumes nothing.",
+    "seconds": 10
+  },
+  {
+    "text": "Every portion is tied to a recorded lot and its source. Date labels set planning priority, not food safety.",
+    "seconds": 9
+  },
+  {
+    "text": "Only explicit cooking confirmation consumes supplies. A durable receipt records both dinners. The same preview cannot be confirmed twice.",
+    "seconds": 10
+  },
+  {
+    "text": "Reload the page: the receipt and updated pantry remain. State lives locally, with no cloud account or paid API.",
+    "seconds": 8
+  },
+  {
+    "text": "Plan again and the missing supplies appear. There is no confirmation button while the plan has shopping gaps.",
+    "seconds": 10
+  },
+  {
+    "text": "Record supplies only after you have them. Any pantry change invalidates older previews, so another person’s update cannot silently change dinner.",
+    "seconds": 10
+  },
+  {
+    "text": "Inspect, preview, confirm and restock use the same MCP tools a compatible assistant can call. No shopping orders or automatic purchases.",
+    "seconds": 9
+  },
+  {
+    "text": "A small household tool with clear boundaries: recorded supplies, exact gaps, explicit confirmation. Built for the self-hosted MCP track.",
+    "seconds": 8
+  }
+]

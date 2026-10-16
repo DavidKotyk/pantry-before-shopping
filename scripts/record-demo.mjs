@@ -1,0 +1,52 @@
+import { chromium } from 'playwright';
+import { mkdtempSync, mkdirSync, renameSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { createApp } from '../server.mjs';
+mkdirSync('demo',{recursive:true});
+const {app}=createApp({dataPath:join(mkdtempSync(join(tmpdir(),'pantry-video-')),'state.json')});
+const listener=app.listen(0,'127.0.0.1');await new Promise(r=>listener.once('listening',r));
+const browser=await chromium.launch({channel:'chrome',headless:true});
+const context=await browser.newContext({viewport:{width:1440,height:960},recordVideo:{dir:'demo/raw',size:{width:1440,height:960}}});
+const page=await context.newPage(),chapters=[];
+async function caption(text,seconds=9){
+  chapters.push({text,seconds});
+  await page.evaluate(text=>{let c=document.querySelector('#demo-caption');if(!c){c=document.createElement('div');c.id='demo-caption';c.style.cssText='position:fixed;bottom:18px;left:120px;right:120px;z-index:999;background:#203b29;color:white;padding:20px 28px;border-radius:14px;font:20px/1.4 -apple-system,sans-serif;box-shadow:0 4px 25px #0003;pointer-events:none';document.body.append(c);}c.textContent=text;},text);
+  await page.waitForTimeout(seconds*1000);
+}
+try{
+  await page.goto(`http://127.0.0.1:${listener.address().port}`);
+  await page.locator('#connection').filter({hasText:'MCP 2025-11-25'}).waitFor();
+  await caption('Pantry Before Shopping. Plan dinner from recorded supplies, then keep the final say over what gets used.',9);
+  await caption('This guided demo calls a real self-hosted MCP server. The starting pantry is synthetic; this is not a live Alexa connection.',9);
+  await page.locator('#planning').scrollIntoViewIfNeeded();
+  await page.getByRole('button',{name:'Check pantry & plan dinners'}).click();
+  await page.getByText('Covered by recorded supplies').waitFor();
+  await caption('Two dinners share the same pantry. Three tomato portions cover rice and beans, then pasta. Previewing consumes nothing.',10);
+  await page.getByText('See where every portion comes from',{exact:true}).click();
+  await page.locator('#plan').scrollIntoViewIfNeeded();
+  await caption('Every portion is tied to a recorded lot and its source. Date labels set planning priority, not food safety.',9);
+  await page.getByRole('button',{name:'I’m cooking this'}).click();
+  await page.getByText('Cooking recorded.').waitFor();
+  await page.locator('#receipts').scrollIntoViewIfNeeded();
+  await caption('Only explicit cooking confirmation consumes supplies. A durable receipt records both dinners. The same preview cannot be confirmed twice.',10);
+  await page.reload();await page.locator('#connection').filter({hasText:'MCP'}).waitFor();
+  await page.locator('#receipts').scrollIntoViewIfNeeded();
+  await caption('Reload the page: the receipt and updated pantry remain. State lives locally, with no cloud account or paid API.',8);
+  await page.locator('#planning').scrollIntoViewIfNeeded();
+  await page.getByRole('button',{name:'Check pantry & plan dinners'}).click();await page.getByText('Shopping gaps to resolve').waitFor();
+  await page.locator('#plan').scrollIntoViewIfNeeded();
+  await caption('Plan again and the missing supplies appear. There is no confirmation button while the plan has shopping gaps.',10);
+  await page.getByText('Add supplies you actually have',{exact:true}).click();
+  await page.locator('#stock select').selectOption('tomato');await page.locator('#stock [name=portions]').fill('3');
+  await page.getByRole('button',{name:'Add to pantry',exact:true}).click();
+  await page.locator('#plan').scrollIntoViewIfNeeded();
+  await caption('Record supplies only after you have them. Any pantry change invalidates older previews, so another person’s update cannot silently change dinner.',10);
+  await page.getByText('Under the hood: MCP tool trace',{exact:true}).click();
+  await page.locator('#trace').scrollIntoViewIfNeeded();
+  await caption('Inspect, preview, confirm and restock use the same MCP tools a compatible assistant can call. No shopping orders or automatic purchases.',9);
+  await page.evaluate(()=>window.scrollTo(0,0));
+  await caption('A small household tool with clear boundaries: recorded supplies, exact gaps, explicit confirmation. Built for the self-hosted MCP track.',8);
+  const video=page.video();await context.close();const path=await video.path();renameSync(path,'demo/pantry-before-shopping.webm');
+  writeFileSync('demo/chapters.json',JSON.stringify(chapters,null,2));console.log('Demo recorded.');
+}finally{await browser.close();await new Promise(r=>listener.close(r));}

@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-16T04:22:03.025Z",
+  "checks": [
+    "MCP protocol negotiated",
+    "Two-dinner plan uses real tools",
+    "Preview leaves stock revision unchanged",
+    "Confirmation consumes stock and records receipt",
+    "Receipt survives reload",
+    "Insufficient supplies prevent confirmation",
+    "Stock change invalidates displayed plan",
+    "No horizontal overflow at 390px",
+    "No page errors or external requests"
+  ],
+  "errors": [],
+  "external": []
+}
