@@ -1,0 +1,26 @@
+{
+  "clone": "Isolated temporary local clone",
+  "passed": true,
+  "results": [
+    {
+      "step": 0,
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "step": 1,
+      "exitCode": 0,
+      "output": "\nadded 97 packages, and audited 98 packages in 753ms\n\nfound 0 vulnerabilities\n"
+    },
+    {
+      "step": 2,
+      "exitCode": 0,
+      "output": "\u2714 two meals share stock; preview never consumes and exact gaps accumulate (12.424166ms)\n\u2714 earlier dated lot wins over undated, independent of entry order (0.333541ms)\n\u2714 confirmation persists a receipt and replay cannot consume twice (2.167ms)\n\u2714 adding stock or confirming another plan invalidates older previews (0.25725ms)\n\u2714 invalid inputs fail without a partial store write (0.384542ms)\n\u2714 official client negotiates HTTP protocol and calls real durable tools (117.545375ms)\n\u2139 tests 6\n\u2139 suites 0\n\u2139 pass 6\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 348.16375\n"
+    },
+    {
+      "step": 3,
+      "exitCode": 0,
+      "output": "{\n  \"checks\": [\n    \"MCP protocol negotiated\",\n    \"Two-dinner plan uses real tools\",\n    \"Preview leaves stock revision unchanged\",\n    \"Confirmation consumes stock and records receipt\",\n    \"Receipt survives reload\",\n    \"Insufficient supplies prevent confirmation\",\n    \"Stock change invalidates displayed plan\",\n    \"No horizontal overflow at 390px\",\n    \"No page errors or external requests\"\n  ]\n}\n"
+    }
+  ]
+}

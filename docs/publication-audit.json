@@ -1,7 +1,8 @@
 {
-  "at": "2026-10-16T04:22:27.157713+00:00",
-  "filesReviewed": 25,
+  "at": "2026-10-16T04:24:24.560179+00:00",
+  "filesReviewed": 34,
   "credentialPatternHits": [],
-  "scope": "Tracked-candidate source and text artifacts; excluded node_modules, .git, state data and temporary video files. Pattern scan is not a guarantee of absence.",
-  "publication": "No remote created or upload performed."
+  "scope": "Publication-candidate source and artifacts; excludes .git, node_modules, state and temporary recording files. Bounded pattern scan, not a guarantee.",
+  "publication": "No remote created or uploads performed.",
+  "demoSha256": "83bf594f96702bbb8f13ac61d618683a4ae27269367791ed4143fd3349e71b18"
 }
